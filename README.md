@@ -1,6 +1,6 @@
-# Alchemy::Api
+# Alchemy-API
 
-TODO: Write a gem description
+This is an SDK for [AlchemyAPI](http://www.alchemyapi.com/api/).
 
 ## Installation
 
@@ -18,7 +18,16 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+require 'alchemy-api'
+@alchemy = AlchemyAPI::Client.new('your api key here')
+@alchemy.TextGetTextSentiment(text: "some sample text in here")
+@alchemy.URLGetTitle(url: 'http://github.com')
+puts AlchemyAPI::Client::TEXT_FUNCTIONS # Returns the text functions. Can also use HTML_FUNCTIONS and URL_FUNCTIONS
+```
+
+Check out the [API](http://www.alchemyapi.com/api/) for full usage. All
+functions are named according to their API call.
 
 ## Contributing
 
